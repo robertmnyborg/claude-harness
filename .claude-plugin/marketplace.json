@@ -1,0 +1,14 @@
+{
+  "name": "claude-harness",
+  "description": "Claude Code skills by Robert Nyborg. Each one exists because an agent got something wrong and the failure was counted.",
+  "owner": { "name": "Robert Nyborg" },
+  "plugins": [
+    { "name": "skill-eval", "description": "A/B test whether a skill helps, plus a retro skill that turns session failures into harness fixes", "source": { "source": "github", "repo": "robertmnyborg/skill-eval" }, "strict": false, "skills": ["./skills/skill-eval", "./skills/retro"] },
+    { "name": "analyst-rigor-skills", "description": "Stop an agent from fabricating causal claims, root causes, quotes, and personas", "source": { "source": "github", "repo": "robertmnyborg/analyst-rigor-skills" }, "strict": false, "skills": ["./skills/causal-claim", "./skills/metric-diagnosis", "./skills/trustworthy-insights", "./skills/job-card"] },
+    { "name": "everyday-agent-skills", "description": "Write steps someone else can follow, judge a tool before adopting it, decode a confusing message, read Reddit and X read-only", "source": { "source": "github", "repo": "robertmnyborg/everyday-agent-skills" }, "strict": false, "skills": ["./skills/procedure-writing-rules", "./skills/tool-fit", "./skills/explain-message", "./skills/social-research"] },
+    { "name": "ux-evidence", "description": "Ground UI and UX work in evidence before the agent writes UI code", "source": { "source": "github", "repo": "robertmnyborg/ux-evidence" }, "strict": false, "skills": ["./skills/ux-evidence"] },
+    { "name": "product-thinking", "description": "A Socratic planning skill that turns a non-engineer's idea into a build-ready plan", "source": { "source": "github", "repo": "robertmnyborg/product-thinking" } },
+    { "name": "self-review-evaluator", "description": "Evaluate a self-review against your leveling framework: rating, gap analysis, probing questions, development plan", "source": { "source": "github", "repo": "robertmnyborg/self-review-evaluator" }, "strict": false, "skills": ["./skills/self-review-evaluator"] },
+    { "name": "principal-reps", "description": "Timed interview reps that train the Principal-level PM answer pattern until it is automatic", "source": { "source": "git-subdir", "url": "https://github.com/robertmnyborg/principal-reps.git", "path": "plugins/principal-reps" } }
+  ]
+}
